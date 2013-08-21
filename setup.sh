@@ -4,6 +4,7 @@ casks=(`cat brewCaskList`)
 npms=(`cat npmList`)
 echo "installing homebrew"
 ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+brew tap phinze/homebrew-cask
 echo "installing brew packages"
 for package in "${brews[@]}"
 	do
