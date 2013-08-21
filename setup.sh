@@ -12,6 +12,8 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
 				echo "installing homebrew"
 				ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+				brew doctor
+				brew update
 		fi
 		read -p "Install Homebrew packages in brewList? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
@@ -33,6 +35,9 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 					do
 						brew cask install $app
 				done
+				echo "linking apps"
+				brew cask linkapps
+				brew cask alfred link
 		fi
 		read -p "Install NPM packages in npmList? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
@@ -43,6 +48,12 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 					do
 						npm install -g $package
 				done
+		fi
+		read -p "Unhide ~/Library/? "
+		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
+			then
+				echo "unhiding library"
+				chflags nohidden ~/Library/
 		fi
 		read -p "Open App store? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
