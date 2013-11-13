@@ -49,6 +49,12 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 						npm install -g $package
 				done
 		fi
+                read -p "Install 'Legit' git aliases? "
+                if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
+                        then
+                                echo "installing Legit"
+				legit install
+                fi
 		read -p "Unhide ~/Library/? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
