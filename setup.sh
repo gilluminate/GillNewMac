@@ -11,7 +11,7 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
 				echo "installing homebrew"
-				ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+				ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 				brew doctor
 				brew update
 		fi
