@@ -35,8 +35,8 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 					do
 						brew cask install $app
 				done
-				echo "linking apps"
-				brew cask linkapps
+				echo "checking linked apps"
+				brew cask checklinks
 				brew cask alfred link
 		fi
 		read -p "Install NPM packages in npmList? "
