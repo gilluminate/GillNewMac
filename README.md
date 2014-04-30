@@ -1,7 +1,9 @@
 Gill New Mac
 ==========
 
-for automating setup of a new mac
+For automating setup of a new mac
+
+(Requires XCode Dev Tools)
 
 1. [Download](https://github.com/gilluminate/GillNewMac/archive/master.zip "zip file")
 1. edit the *List files to your heart's content
