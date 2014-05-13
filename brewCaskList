@@ -1,8 +1,6 @@
-adium
 alfred
 appcleaner
 caffeine
-ccmenu
 dropbox
 evernote
 firefox
@@ -18,8 +16,8 @@ skype
 spotify
 sublime-text
 handbrake
-plex-media-server
+#plex-media-server
 subler
-codekit
 cakebrew
 slack
+mamp
