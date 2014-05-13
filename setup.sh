@@ -61,6 +61,11 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 				echo "unhiding library"
 				chflags nohidden ~/Library/
 		fi
+		read -p "Generate SSH Key? "
+		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
+			then
+				ssh-keygen
+		fi
 		read -p "Open App store? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
