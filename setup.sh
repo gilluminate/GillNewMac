@@ -19,6 +19,7 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
 				brew tap phinze/homebrew-cask
+				brew tap thoughtbot/formulae
 				echo "installing brew packages"
 				brews=(`cat brewList`)
 				for package in "${brews[@]}"
