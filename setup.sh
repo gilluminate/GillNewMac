@@ -18,7 +18,7 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 		read -p "Install Homebrew packages in brewList? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
-				brew tap phinze/homebrew-cask
+				brew tap caskroom/cask
 				brew tap thoughtbot/formulae
 				echo "installing brew packages"
 				brews=(`cat brewList`)
@@ -37,8 +37,6 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 						brew cask install $app
 				done
 				echo "checking linked apps"
-				brew cask checklinks
-				brew cask alfred link
 		fi
 		read -p "Install NPM packages in npmList? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
@@ -49,13 +47,6 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 					do
 						npm install -g $package
 				done
-		fi
-                read -p "Install 'Legit' git aliases? "
-                if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
-                        then
-                                echo "installing Legit"
-				legit install
-                fi
 		read -p "Unhide ~/Library/? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then

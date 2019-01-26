@@ -1,9 +1,9 @@
 git
 ruby
 python
-brew-cask
-nodejs
-ant
-legit
-tig
-gitsh
+cask
+node
+openssl
+svgo
+lastpass-cli
+brew-cask-completion
