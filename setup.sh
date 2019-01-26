@@ -47,6 +47,7 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 					do
 						npm install -g $package
 				done
+		fi
 		read -p "Unhide ~/Library/? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
