@@ -1,9 +1,6 @@
 git
-ruby
-python
 cask
 node
-openssl
 svgo
 lastpass-cli
 brew-cask-completion
