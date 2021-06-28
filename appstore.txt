@@ -1,10 +1,4 @@
-Amphetamine
-Microsoft Excel
-Microsoft OneNote
-Microsoft PowerPoint
 Pixelmator
-Skitch
-Slack
 Spark
 XCode
 
