@@ -34,7 +34,7 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 				casks=(`cat brewCaskList`)
 				for app in "${casks[@]}"
 					do
-						brew cask install $app
+						brew install --cask $app
 				done
 				echo "checking linked apps"
 		fi
