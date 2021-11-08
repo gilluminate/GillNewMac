@@ -18,7 +18,7 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 		read -p "Install Homebrew packages in brewList? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
-				brew tap caskroom/cask
+				brew tap homebrew/cask
 				brew tap thoughtbot/formulae
 				echo "installing brew packages"
 				brews=(`cat brewList`)
