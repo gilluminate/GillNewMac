@@ -1,5 +1,2 @@
-Pixelmator
-Spark
+Things
 XCode
-
-Integrity Plus https://peacockmedia.software/mac/integrity-plus/index.html
