@@ -7,6 +7,18 @@ read -p "Have you already installed XCode Devloper Tools? (y/n) "
 
 if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 	then
+  		read -p "Install Node Version Manager? "
+		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
+			then
+				echo "installing nvm"
+				ruby -e "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash)"
+		fi
+  		read -p "Install Node LTS? "
+		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
+			then
+				echo "installing node"
+				nvm install --lts
+		fi
 		read -p "Install Homebrew? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
