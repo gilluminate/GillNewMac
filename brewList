@@ -1,6 +1,5 @@
 git
 cask
-node
 svgo
-lastpass-cli
 brew-cask-completion
+watchman
