@@ -18,6 +18,8 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
 				echo "installing node"
 				nvm install --lts
+				echo "installing latest npm"
+    				npm i -g npm
 		fi
 		read -p "Install Homebrew? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
