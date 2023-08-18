@@ -1,6 +1,2 @@
-gulp
-gulp-categorized-tasks
 prettier
-ts-node
-tslint
-typescript
+yarn
