@@ -7,17 +7,33 @@ read -p "Have you already installed XCode Devloper Tools? (y/n) "
 
 if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 	then
+  		read -p "Install Oh My Zsh? "
+		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
+			then
+				echo "installing oh-my-zsh"
+				sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+		fi
+  		read -p "reverence cloud User Settings? "
+		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
+			then
+				echo "creating gitconfig softlink"
+				ln -s ~/Documents/Settings/User/.gitconfig ~/.gitconfig
+				echo "creating gitingore softlink"
+				ln -s ~/Documents/Settings/User/.gitignore ~/.gitignore
+				echo "set zsh home"
+				echo "export ZDOTDIR=~/Documents/Settings/User/" >> ~/.zshenv
+		fi
   		read -p "Install Node Version Manager? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
 				echo "installing nvm"
-				ruby -e "$(curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.4/install.sh | bash)"
+				curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 		fi
   		read -p "Install Node LTS? "
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
 				echo "installing node"
-				nvm install --lts
+				nvm install --lts | bash
 				echo "installing latest npm"
     				npm i -g npm
 		fi
@@ -25,7 +41,7 @@ if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 		if [[ $REPLY =~ ^([yY][eE][sS]|[yY])$ ]]
 			then
 				echo "installing homebrew"
-				ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+				/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 				brew doctor
 				brew update
 		fi
